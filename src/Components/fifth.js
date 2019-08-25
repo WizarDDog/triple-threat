@@ -16,11 +16,6 @@ class Fifth extends Component  {
         this.setState({ fifth: split[split.length - 5]})
     }
 
-    render = () => { 
-        let langs = ["Ruby","ES6","Scala"] 
-        return (<div>{langs.map(it => <p>it</p>)}</div>) 
-    }
-
     render() {
         const { fifth } = this.state;
         return (
@@ -28,7 +23,6 @@ class Fifth extends Component  {
                 <input onChange={ev => this.setState({numbers : ev.target.value})}/>
                 <button onClick={() => this.fifthEl()}>Fifth el from end</button>
                 <div>{fifth}</div>
-                {this.render()}
             </div>
         );
     }
